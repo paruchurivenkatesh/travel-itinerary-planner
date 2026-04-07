@@ -1,0 +1,200 @@
+================================================================================
+TRAVEL ITINERARY PLANNER - GITHUB UPLOAD INSTRUCTIONS
+================================================================================
+
+COMPLETE STEP-BY-STEP GUIDE TO UPLOAD YOUR PROJECT TO GITHUB
+
+================================================================================
+PART 1: PREPARE YOUR LOCAL REPOSITORY
+================================================================================
+
+STEP 1: Open Command Prompt or PowerShell
+---------
+- Press: Windows key + R
+- Type: cmd (or powershell)
+- Press: Enter
+
+STEP 2: Navigate to your project folder
+---------
+Type this command:
+  cd "C:\Users\VENKATESH\OneDrive\Desktop\meta"
+
+STEP 3: Initialize Git (only if not already done)
+---------
+Type:
+  git init
+
+Expected output: Initialized empty Git repository
+
+STEP 4: Add all your files to Git
+---------
+Type:
+  git add .
+
+(No output means success)
+
+STEP 5: Create first commit
+---------
+Type:
+  git commit -m "Initial commit: Travel Itinerary Planner OpenEnv environment"
+
+Expected output: Multiple files changed, insertions(+)
+
+================================================================================
+PART 2: CREATE EMPTY REPOSITORY ON GITHUB
+================================================================================
+
+STEP 6: Go to GitHub
+---------
+1. Open web browser
+2. Go to: https://github.com
+3. Sign in to your GitHub account
+4. If no account, click "Sign up" and create one
+
+STEP 7: Create New Repository
+---------
+1. Look for green "New repository" button (usually top right)
+2. Click it
+
+STEP 8: Fill Repository Details
+---------
+- Repository name: travel-itinerary-planner
+- Description: AI Travel Planning Environment with OpenEnv
+- Visibility: PUBLIC (must be public)
+- Initialize this repository with:
+    ✓ DO NOT check "Add a README file"
+    ✓ DO NOT check ".gitignore"
+    ✓ DO NOT check "Choose a license"
+- Click "Create repository"
+
+================================================================================
+PART 3: CONNECT LOCAL REPO TO GITHUB AND UPLOAD
+================================================================================
+
+STEP 9: GitHub shows connection commands
+---------
+After clicking "Create repository", GitHub will show you commands.
+You should see a section that says:
+"...or push an existing repository from the command line"
+
+STEP 10: Copy and Run Commands
+---------
+Replace YOUR_USERNAME with YOUR ACTUAL GitHub username!
+
+Type these TWO commands (one at a time):
+
+Command 1:
+  git remote add origin https://github.com/YOUR_USERNAME/travel-itinerary-planner.git
+
+Command 2:
+  git push -u origin main
+
+IMPORTANT: When you run "git push", you may be asked to login to GitHub.
+Use your GitHub username and password (or personal access token).
+
+================================================================================
+PART 4: VERIFY SUCCESS
+================================================================================
+
+STEP 11: Check connection
+---------
+Type:
+  git remote -v
+
+Expected output:
+  origin  https://github.com/YOUR_USERNAME/travel-itinerary-planner.git (fetch)
+  origin  https://github.com/YOUR_USERNAME/travel-itinerary-planner.git (push)
+
+STEP 12: Check status
+---------
+Type:
+  git status
+
+Expected output:
+  On branch main
+  nothing to commit, working tree clean
+
+STEP 13: View your repository on GitHub
+---------
+Go to: https://github.com/YOUR_USERNAME/travel-itinerary-planner
+
+You should see all your files!
+
+================================================================================
+EXAMPLE WITH ACTUAL USERNAME
+================================================================================
+
+If your GitHub username is "johnsmith", the commands would be:
+
+git remote add origin https://github.com/johnsmith/travel-itinerary-planner.git
+git push -u origin main
+
+Then visit: https://github.com/johnsmith/travel-itinerary-planner
+
+================================================================================
+TROUBLESHOOTING
+================================================================================
+
+Problem: "git is not recognized as an internal or external command"
+Solution: Install Git from https://git-scm.com/download/win and restart computer
+
+Problem: "fatal: remote origin already exists"
+Solution: Run this command first:
+  git remote remove origin
+Then try again from Step 10
+
+Problem: "fatal: not a git repository"
+Solution: Make sure you're in the correct folder:
+  cd "C:\Users\VENKATESH\OneDrive\Desktop\meta"
+Then run from Step 3
+
+Problem: "fatal: 'origin' does not appear to be a 'git' repository"
+Solution: Make sure you ran Step 10 Command 1 correctly. Check you replaced YOUR_USERNAME
+
+Problem: "Permission denied (publickey)" when pushing
+Solution: You need to set up SSH key or use HTTPS token. GitHub will show you options.
+
+Problem: "Repository not found"
+Solution: Make sure you:
+  1. Created the repository on GitHub first (Step 8)
+  2. Used the correct GitHub username (not email)
+  3. Repository is PUBLIC
+
+================================================================================
+QUICK REFERENCE - ALL COMMANDS
+================================================================================
+
+# Setup local repository
+cd "C:\Users\VENKATESH\OneDrive\Desktop\meta"
+git init
+git add .
+git commit -m "Initial commit: Travel Itinerary Planner OpenEnv environment"
+
+# Connect to GitHub (replace YOUR_USERNAME!)
+git remote add origin https://github.com/YOUR_USERNAME/travel-itinerary-planner.git
+git push -u origin main
+
+# Verify
+git remote -v
+git status
+
+================================================================================
+YOU'RE DONE!
+================================================================================
+
+Your Travel Itinerary Planner is now on GitHub and can be shared with others!
+
+Files uploaded:
+- app.py                    (FastAPI server)
+- inference.py             (LLM baseline agent)
+- requirements.txt        (Python dependencies)
+- Dockerfile              (Docker container)
+- openenv.yaml           (Environment specification)
+- README.md              (Documentation)
+- VERIFICATION_REPORT.md (Project verification)
+- travel_itinerary_planner/  (Package code)
+- tests/                     (Unit tests)
+
+Your repository URL: https://github.com/YOUR_USERNAME/travel-itinerary-planner
+
+================================================================================

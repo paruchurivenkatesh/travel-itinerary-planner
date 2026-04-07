@@ -1,0 +1,54 @@
+# GitHub Deployment Guide - Travel Itinerary Planner
+# ===================================================
+
+## Step 1: Install Git (if needed)
+1. Go to: https://git-scm.com/download/win
+2. Download and install Git for Windows
+3. Restart your computer
+
+## Step 2: Open Command Prompt/PowerShell
+1. Press Windows key + R
+2. Type "cmd" or "powershell"
+3. Press Enter
+
+## Step 3: Navigate to your project folder
+Type this command:
+```
+cd "C:\Users\VENKATESH\OneDrive\Desktop\meta"
+```
+
+## Step 4: Initialize Git repository
+Type these commands one by one:
+```
+git init
+git add .
+git commit -m "Initial commit: Travel Itinerary Planner"
+```
+
+## Step 5: Create GitHub Repository
+1. Open browser and go to: https://github.com
+2. Sign in to your GitHub account
+3. Click the green "New repository" button
+4. Repository name: travel-itinerary-planner
+5. Description: AI Travel Planning Environment
+6. Make it PUBLIC
+7. DO NOT check any boxes (no README, no .gitignore)
+8. Click "Create repository"
+
+## Step 6: Connect your local code to GitHub
+After creating the repository, GitHub will show you commands.
+Copy and paste these commands (replace YOUR_USERNAME):
+
+```
+git remote add origin https://github.com/YOUR_USERNAME/travel-itinerary-planner.git
+git push -u origin main
+```
+
+## Step 7: Verify it worked
+Your code should now be on GitHub!
+Go to: https://github.com/YOUR_USERNAME/travel-itinerary-planner
+
+## Troubleshooting:
+- If "git not recognized": Install Git first
+- If "remote origin already exists": Run `git remote remove origin` first
+- If push fails: Make sure you replaced YOUR_USERNAME with your actual GitHub username

@@ -1,0 +1,67 @@
+name: travel-itinerary-planner
+version: 0.1.0
+description: Travel Itinerary Planner - An OpenEnv environment for training AI agents to plan vacation itineraries with budget and schedule constraints. The agent must select activities, manage a budget, and satisfy required travel objectives to maximize a score based on required stops, budget efficiency, and variety.
+author: Travel AI Team
+email: travel-ai@example.com
+
+observation_space:
+  type: object
+  properties:
+    current_day:
+      type: integer
+      description: The current day of the trip (starts at 1)
+    selected_activities:
+      type: array
+      items:
+        type: string
+      description: List of selected activity names
+    budget_left:
+      type: number
+      description: Remaining budget for the travel itinerary
+    total_days:
+      type: integer
+      description: Total number of days for the trip
+    destination:
+      type: string
+      description: The destination of the trip
+    available_activities:
+      type: array
+      items:
+        type: object
+        properties:
+          id:
+            type: integer
+          name:
+            type: string
+          cost:
+            type: number
+          type:
+            type: string
+      description: List of available activities with details
+
+action_space:
+  type: object
+  properties:
+    action_type:
+      type: string
+      enum: ["add_activity", "remove_activity", "finish"]
+      description: The type of action to perform
+    activity_id:
+      type: integer
+      nullable: true
+      description: The ID of the activity for add/remove actions
+
+reward_range:
+  - 0.0
+  - 1.0
+
+tasks:
+  - name: easy
+    description: Plan a 1-day trip to Paris with a $500 budget. Must include the Eiffel Tower. Score based on required activities, budget efficiency, and activity variety.
+    difficulty: easy
+  - name: medium
+    description: Plan a 3-day trip to Tokyo with a $1000 budget. Must include Mount Fuji and Shibuya Crossing. Score based on required activities, budget efficiency, and activity variety.
+    difficulty: medium
+  - name: hard
+    description: Plan a 7-day Europe tour with a $2000 budget. Must include Eiffel Tower, Colosseum, and Big Ben. Score based on required activities, budget efficiency, and activity variety.
+    difficulty: hard
